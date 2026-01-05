@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Challenge</title>
+    <link rel="stylesheet" href="style-form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Pendaftaran Challenge</h1>
+        <p class="subtitle">Isi form di bawah dengan data yang valid</p>
+
+        <div id="errorBox" class="error-box hidden"></div>
+        <div id="successBox" class="success-box hidden"></div>
+
+        <form id="myForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap *</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="contoh@gmail.com atau contoh@yahoo.com">
+                <small>Hanya @gmail.com atau @yahoo.com</small>
+            </div>
+
+            <div class="form-group">
+                <label for="nomor">Nomor Telepon *</label>
+                <input type="text" id="nomor" name="nomor" placeholder="08123456789">
+                <small>Minimal 10 digit angka</small>
+            </div>
+
+            <div class="form-group">
+                <label for="pesan">Pesan *</label>
+                <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Kirim Data</button>
+        </form>
+
+        <div class="api-section">
+            <h2>Test API</h2>
+            <button onclick="testAPI()" class="btn-api">Get Server Info</button>
+            <button onclick="getUser(1)" class="btn-api">Get User ID 1</button>
+            <button onclick="getUser(2)" class="btn-api">Get User ID 2</button>
+            <button onclick="getUser(999)" class="btn-api">Get User ID 999 (Error)</button>
+            <pre id="apiResult"></pre>
+        </div>
+    </div>
+
+    <script src="script-form.js"></script>
+</body>
+</html>
